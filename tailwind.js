@@ -10,6 +10,7 @@ module.exports = {
       md: '768px',
       lg: '1024px',
       xl: '1280px',
+      xxl:'1600px',
     },
     extend: {
       colors: {
@@ -19,7 +20,7 @@ module.exports = {
         black: '#000',
         white: '#fff',
         indico: '#28C1AA',
-        kaka:'#ff1f',
+        kaka:'#FEB23E',
   
         gray: {
           100: '#f7fafc',

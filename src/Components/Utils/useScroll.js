@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 
 const useScroll = () => {
-  const [goingUp, setGoingUp] = useState(false);
+  const [goingUp, setGoingUp] = useState(true);
   const prevScrollY = useRef(0);
+  //const isBrowser = typeof window !== `undefined`;
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -17,9 +18,10 @@ const useScroll = () => {
     
     
     window.addEventListener("scroll", handleScroll, { passive: true });
+    //console.log(goingUp, prevScrollY)
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [goingUp])
-  return goingUp
+  }, [goingUp, prevScrollY])
+  return ({prevScrollY, goingUp})
 }
 
 export default useScroll
