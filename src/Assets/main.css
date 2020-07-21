@@ -567,7 +567,7 @@ audio,
 iframe,
 embed,
 object {
-  display: block;
+  display: inline-block;
   vertical-align: middle;
 }
 
@@ -586,6 +586,8 @@ video {
 
 .container {
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (min-width: 640px) {
@@ -6336,6 +6338,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-bgimage {
+  height: 37rem;
 }
 
 .text-xs {
@@ -20216,6 +20222,10 @@ video {
 
   .sm\:h-screen {
     height: 100vh;
+  }
+
+  .sm\:h-bgimage {
+    height: 37rem;
   }
 
   .sm\:text-xs {
@@ -34099,6 +34109,10 @@ video {
     height: 100vh;
   }
 
+  .md\:h-bgimage {
+    height: 37rem;
+  }
+
   .md\:text-xs {
     font-size: 0.75rem;
   }
@@ -47978,6 +47992,10 @@ video {
 
   .lg\:h-screen {
     height: 100vh;
+  }
+
+  .lg\:h-bgimage {
+    height: 37rem;
   }
 
   .lg\:text-xs {
@@ -61861,6 +61879,10 @@ video {
     height: 100vh;
   }
 
+  .xl\:h-bgimage {
+    height: 37rem;
+  }
+
   .xl\:text-xs {
     font-size: 0.75rem;
   }
@@ -75740,6 +75762,10 @@ video {
 
   .xxl\:h-screen {
     height: 100vh;
+  }
+
+  .xxl\:h-bgimage {
+    height: 37rem;
   }
 
   .xxl\:text-xs {
