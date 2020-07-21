@@ -25,14 +25,14 @@ const tailwindcss = {
     `,
   ],
   nav: [
-    `w-10/12 m-auto flex items-center justify-between flex-wrap bg-white
+    `m-auto flex items-center justify-between flex-wrap bg-white
     `,
   ],
 };
 
 const DesktopMenu = () => {
   return (
-    <div className="pt-8 pb-8 z-10 bg-white">
+    <div className="pt-8 pb-8 z-10 bg-white container">
       <nav className={tailwindcss.nav}>
         <Logo />
         <div className={tailwindcss.menuLinks}>

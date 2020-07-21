@@ -22,7 +22,7 @@ const tailwindcss = {
   ],
   navScrollDown: [
     `transition duration-100 ease-in flex items-center justify-between flex-wrap p-6 shadow-lg z-10 bg-teal-500 w-screen
-    fixed transform -translate-y-20`,
+    fixed transform -translate-y-24`,
   ],
 };
 
@@ -43,7 +43,7 @@ const MobileMenu = () => {
     : tailwindcss.navScrollDown;
 
   return (
-    <div className="relative">
+    <>
       <nav className={navBar}>
       <Logo />
         <div className="block xl:hidden">
@@ -83,7 +83,7 @@ const MobileMenu = () => {
           </div>
         </div>
       </nav>
-    </div>
+    </>
   );
 };
 

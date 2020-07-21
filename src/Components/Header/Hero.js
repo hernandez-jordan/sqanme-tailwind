@@ -3,8 +3,8 @@ import bannerImage from "../../Images/bannerImage.svg";
 
 const tailwindcss = {
   banner: [
-    `flex flex-col xl:flex-row w-10/12 m-auto self-center h-screen transform translate-y-20 translate-y-40 inline-block 
-    justify-center text-center translate-y-24 
+    ` container flex flex-col xl:flex-row m-auto self-center h-screen transform translate-y-40 xl:translate-y-20 inline-block 
+    justify-center text-center
     xl:justify-between xl:text-left`,
   ],
   button: [
@@ -15,7 +15,7 @@ const tailwindcss = {
     xl:m-0 xl:mt-8`,
   ],
   backgroundImage: [
-    `inline-block xl:block xl:w-3/6 bg-contain max-h-2/4 lg:max-h-3/4 m-auto xl:m-0 w-4/5 mt-20 xl:mt-0`,
+    ` xl:block xl:w-3/6 bg-contain lg:max-h-3/4 m-auto xl:m-0 w-4/5 mt-20 xl:mt-0`,
   ],
   arrowActive: [
     `ml-8 transition duration-200 ease-out transform translate-x-4`,
@@ -28,7 +28,7 @@ const style = {
   bannerDiv: {
     backgroundImage: `url(${bannerImage})`,
     backgroundRepeat: "no-repeat",
-    height: 850,
+    //height: "37rem",
   },
   button: {
     width: "fit-content",
@@ -76,10 +76,13 @@ const Hero = () => {
             {buttonArrow}
           </button>
         </div>
+        <div className={tailwindcss.backgroundImage}>
         <div
-          className={tailwindcss.backgroundImage}
+          className="bg-contain m-auto lg:w-3/4 xl:w-auto xl:h-full h-bgimage"
           style={style.bannerDiv}
         ></div>
+        </div>
+        
       </div>
     </>
   );
