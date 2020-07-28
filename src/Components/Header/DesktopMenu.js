@@ -3,8 +3,8 @@ import Logo from "../Header/Logo";
 
 const tailwindcss = {
   link: [
-    `block lg:inline-block opacity-75 text-indico hover:opacity-100 mr-6 xxl:mr-8 text-lg xxl:text-2xl
-    transition-opacity duration-200 ease-out 
+    `block lg:inline-block opacity-75 text-indico-100 hover:opacity-100 mr-6 xxl:mr-8 text-lg xxl:text-2xl
+    transition-opacity duration-200 ease-out hover:border-indico-100 border-white border-b-2 transition-border duration-500 ease-out 
     `,
   ],
   img: [
@@ -20,8 +20,8 @@ const tailwindcss = {
     `,
   ],
   button: [
-    `bg-indico inline-block font-semibold text-lg xxl:text-2xl px-12 py-4 leading-none rounded-full text-white hover:text-white border 
-    hover:border-white hover:bg-indico transition-bg duration-200 ease-out hover:shadow-lg hover:bg-opacity-75
+    `bg-indico-100 inline-block font-semibold text-lg xxl:text-2xl px-12 py-4 leading-none rounded-full text-white hover:text-white  
+     transition-bg duration-200 ease-out hover:shadow-lg hover:bg-indico-200
     `,
   ],
   nav: [
@@ -41,13 +41,16 @@ const DesktopMenu = () => {
               Home
             </a>
             <a href="/#responsive-header" className={tailwindcss.link}>
+              About
+            </a>
+            <a href="/#responsive-header" className={tailwindcss.link}>
               Features
             </a>
             <a href="/#responsive-header" className={tailwindcss.link}>
-              How it works
+              Pricing
             </a>
             <a href="/#responsive-header" className={tailwindcss.link}>
-              Pricing
+              Contact
             </a>
           </div>
           <div>

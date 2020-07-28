@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { animations, easings } from 'react-animation'
 import bannerImage from "../../Images/bannerImage.svg";
 
 const tailwindcss = {
@@ -8,14 +9,17 @@ const tailwindcss = {
     xl:justify-between xl:text-left`,
   ],
   button: [
-    `flex bg-indico focus:outline-none inline-block text:xl lg:text-2xl px-12 py-6 mt-8 
+    `flex bg-indico-100 focus:outline-none inline-block text:xl lg:text-2xl px-12 py-6 mt-8 
     font-medium lg:font-semibold items-center leading-none rounded-full text-white
-    border hover:border-white transform transition-bg duration-200 ease-out hover:shadow-lg hover:bg-opacity-75
+    border transition-bg duration-200 ease-out hover:shadow-lg hover:bg-indico-200
     m-auto mt-4
     xl:m-0 xl:mt-8`,
   ],
-  backgroundImage: [
+  heroImageWrap: [
     ` xl:block xl:w-3/6 bg-contain lg:max-h-3/4 m-auto xl:m-0 w-4/5 mt-20 xl:mt-0`,
+  ],
+  image: [
+    `bg-contain m-auto lg:w-3/4 xl:w-auto xl:h-full h-bgimage`
   ],
   arrowActive: [
     `ml-8 transition duration-200 ease-out transform translate-x-4`,
@@ -25,7 +29,7 @@ const tailwindcss = {
   ],
 };
 const style = {
-  bannerDiv: {
+  heroImage: {
     backgroundImage: `url(${bannerImage})`,
     backgroundRepeat: "no-repeat",
     //height: "37rem",
@@ -54,6 +58,9 @@ const Hero = () => {
       />
     </svg>
   );
+  const animation = {
+    animation: `pop-in ${easings.easeOutExpo} 500ms forwards`
+  }
 
   return (
     <>
@@ -76,13 +83,12 @@ const Hero = () => {
             {buttonArrow}
           </button>
         </div>
-        <div className={tailwindcss.backgroundImage}>
-        <div
-          className="bg-contain m-auto lg:w-3/4 xl:w-auto xl:h-full h-bgimage"
-          style={style.bannerDiv}
-        ></div>
+        <div className={tailwindcss.heroImageWrap} style={animation}>
+          <div
+            className={tailwindcss.image}
+            style={style.heroImage}
+          ></div>
         </div>
-        
       </div>
     </>
   );

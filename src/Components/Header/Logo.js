@@ -3,7 +3,7 @@ import UseWindowDimensions from "../Utils/useWindowDimensions";
 
 const tailwindcss = {
   DesktopLogo: [
-    `font-medium text-5xl tracking-tight text-indico `,
+    `font-medium text-5xl tracking-tight text-indico-100  `,
   ],
   MobileLogo: [
     `font-normal text-2xl tracking-tight text-white`,

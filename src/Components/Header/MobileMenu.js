@@ -64,13 +64,16 @@ const MobileMenu = () => {
               Home
             </a>
             <a href="/#responsive-header" className={tailwindcss.link}>
+              About
+            </a>
+            <a href="/#responsive-header" className={tailwindcss.link}>
               Features
             </a>
             <a href="/#responsive-header" className={tailwindcss.link}>
-              How it works
+              Pricing
             </a>
             <a href="/#responsive-header" className={tailwindcss.link}>
-              Pricing
+              Contact
             </a>
           </div>
           <div className="border-t border-green-200 mt-6 border-opacity-25 large:hidden-border">

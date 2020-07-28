@@ -19,7 +19,9 @@ module.exports = {
   
         black: '#000',
         white: '#fff',
-        indico: '#28C1AA',
+        indico: {
+          100:'#28C1AA',
+          200: '#23AA96'},
         kaka:'#FEB23E',
   
         gray: {
@@ -638,13 +640,13 @@ module.exports = {
     alignSelf: ['responsive'],
     appearance: ['responsive'],
     backgroundAttachment: ['responsive'],
-    backgroundColor: ['responsive', 'hover', 'focus'],
-    backgroundOpacity: ['responsive', 'hover', 'focus'],
+    backgroundColor: ['responsive', 'hover', 'focus', 'active'],
+    backgroundOpacity: ['responsive', 'hover', 'focus', 'active'],
     backgroundPosition: ['responsive'],
     backgroundRepeat: ['responsive'],
     backgroundSize: ['responsive'],
     borderCollapse: ['responsive'],
-    borderColor: ['responsive', 'hover', 'focus'],
+    borderColor: ['responsive', 'hover', 'focus', 'active'],
     borderOpacity: ['responsive', 'hover', 'focus'],
     borderRadius: ['responsive'],
     borderStyle: ['responsive'],
